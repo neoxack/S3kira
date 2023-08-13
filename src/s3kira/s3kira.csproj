@@ -12,7 +12,7 @@
         <Version>0.6.0</Version>
         <PackageId>Neoxack.S3Kira</PackageId>
         <PackageTags>s3;performance</PackageTags>
-        <PackageProjectUrl>https://gitlab.com/neoxack/s3kira</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/neoxack/S3kira</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Copyright>Semyon Dragunov</Copyright>
         <Authors>Semyon Dragunov (neoxack@gmail.com)</Authors>

@@ -1,3 +1,7 @@
+[![NuGet](https://img.shields.io/nuget/v/Neoxack.S3Kira.svg)](https://www.nuget.org/packages/Neoxack.S3Kira)
+[![NuGet](https://img.shields.io/nuget/dt/Neoxack.S3Kira.svg)](https://www.nuget.org/packages/Neoxack.S3Kira)
+[![CodeFactor](https://www.codefactor.io/repository/github/neoxack/s3kira/badge)](https://www.codefactor.io/repository/github/neoxack/s3kira)
+
 # S3Kira 🪓
 
 
@@ -71,10 +75,17 @@ using (var fileStream = File.OpenRead("path/to/your/file"))
 
 ## Benchmarks
 
+```
+BenchmarkDotNet v0.13.7, macOS Ventura 13.4.1 (c) (22F770820d) [Darwin 22.5.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+.NET SDK 7.0.306
+ [Host]     : .NET 7.0.9 (7.0.923.32018), Arm64 RyuJIT AdvSIMD
+ DefaultJob : .NET 7.0.9 (7.0.923.32018), Arm64 RyuJIT AdvSIMD
+```
 | Method |      Mean |    Error |   StdDev | Ratio | RatioSD |  Allocated | Alloc Ratio |
 |--------|----------:|---------:|---------:|------:|--------:|-----------:|------------:|
-| Minio  | 101.38 ms | 0.968 ms | 0.906 ms |  1.20 |    0.02 | 6463.21 KB |      113.88 |
-| S3Kira |  84.53 ms | 1.315 ms | 1.230 ms |  1.00 |    0.00 |   56.76 KB |        1.00 |
+| Minio  | 101.78 ms | 1.821 ms | 1.703 ms |  1.20 |    0.02 | 6463.49 KB |      114.26 |
+| S3Kira |  84.79 ms | 1.122 ms | 1.050 ms |  1.00 |    0.00 |   56.57 KB |        1.00 |
 
 
 ## Contributing
