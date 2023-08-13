@@ -9,7 +9,7 @@
     <PropertyGroup>
         <Title>S3Kira</Title>
         <Description>Simple and fast client for S3 storages</Description>
-        <Version>0.5.0</Version>
+        <Version>0.6.0</Version>
         <PackageId>Neoxack.S3Kira</PackageId>
         <PackageTags>s3;performance</PackageTags>
         <PackageProjectUrl>https://gitlab.com/neoxack/s3kira</PackageProjectUrl>

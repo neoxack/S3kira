@@ -41,10 +41,38 @@ internal sealed class StreamWrapper: Stream
         set => _stream.Position = value;
     }
 
-    public override int Read(byte[] buffer, int offset, int count) => _stream.Read(buffer, offset, count);
-    public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) => _stream.ReadAsync(buffer, offset, count, cancellationToken);
-    public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default) => _stream.ReadAsync(buffer, cancellationToken);
-    public override long Seek(long offset, SeekOrigin origin) => _stream.Seek(offset, origin);
-    public override void SetLength(long value) => _stream.SetLength(value);
-    public override void Write(byte[] buffer, int offset, int count) => _stream.Write(buffer, offset, count);
+    public override int Read(byte[] buffer, int offset, int count)
+    {
+        return _stream.Read(buffer, offset, count);
+    }
+
+    public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
+    {
+        return _stream.ReadAsync(buffer, offset, count, cancellationToken);
+    }
+
+    public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default)
+    {
+        return _stream.ReadAsync(buffer, cancellationToken);
+    }
+
+    public override long Seek(long offset, SeekOrigin origin)
+    {
+        return _stream.Seek(offset, origin);
+    }
+
+    public override void SetLength(long value)
+    {
+        _stream.SetLength(value);
+    }
+
+    public override void Write(byte[] buffer, int offset, int count)
+    {
+        _stream.Write(buffer, offset, count);
+    }
+
+    public override Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken)
+    {
+        return _stream.CopyToAsync(destination, bufferSize, cancellationToken);
+    }
 }

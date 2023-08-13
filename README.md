@@ -6,7 +6,9 @@ S3Kira is a lightweight C# library that provides a simple interface to interact 
 ## Features
 
 - Simple interface for managing buckets and files
-- Low memory footprint
+- [Low memory footprint](#benchmarks)
+- Force delete buckets with files in [Minio S3](https://min.io)
+- Configured PooledConnectionLifetime for reflect the DNS or other network changes
 
 ## Getting Started
 
@@ -66,6 +68,14 @@ using (var fileStream = File.OpenRead("path/to/your/file"))
 - DeleteFileAsync: Deletes a file from a specified bucket
 - IsFileExistsAsync: Checks if a file exists in a specified bucket
 - GetFileStreamAsync: Retrieves a file stream for a file in a specified bucket
+
+## Benchmarks
+
+| Method |      Mean |    Error |   StdDev | Ratio | RatioSD |  Allocated | Alloc Ratio |
+|--------|----------:|---------:|---------:|------:|--------:|-----------:|------------:|
+| Minio  | 101.38 ms | 0.968 ms | 0.906 ms |  1.20 |    0.02 | 6463.21 KB |      113.88 |
+| S3Kira |  84.53 ms | 1.315 ms | 1.230 ms |  1.00 |    0.00 |   56.76 KB |        1.00 |
+
 
 ## Contributing
 
