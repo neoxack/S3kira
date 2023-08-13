@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6AC78A06-F985-4C3D-BF25-69C2B8C2849D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s3kira", "src\s3kira\s3kira.csproj", "{A003B20B-E3A3-4E2C-95CB-853A4A45CC05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s3kira.Benchmark", "src\s3kira.Benchmark\s3kira.Benchmark.csproj", "{92F6626C-737B-41DC-94B7-FBC4A256EBA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s3kira.Tests", "src\s3kira.Tests\s3kira.Tests.csproj", "{7F021FB8-2F39-42DD-9729-F471788DF04B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A003B20B-E3A3-4E2C-95CB-853A4A45CC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A003B20B-E3A3-4E2C-95CB-853A4A45CC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A003B20B-E3A3-4E2C-95CB-853A4A45CC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A003B20B-E3A3-4E2C-95CB-853A4A45CC05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F6626C-737B-41DC-94B7-FBC4A256EBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F6626C-737B-41DC-94B7-FBC4A256EBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F6626C-737B-41DC-94B7-FBC4A256EBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F6626C-737B-41DC-94B7-FBC4A256EBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F021FB8-2F39-42DD-9729-F471788DF04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F021FB8-2F39-42DD-9729-F471788DF04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F021FB8-2F39-42DD-9729-F471788DF04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F021FB8-2F39-42DD-9729-F471788DF04B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A003B20B-E3A3-4E2C-95CB-853A4A45CC05} = {6AC78A06-F985-4C3D-BF25-69C2B8C2849D}
+		{92F6626C-737B-41DC-94B7-FBC4A256EBA7} = {6AC78A06-F985-4C3D-BF25-69C2B8C2849D}
+		{7F021FB8-2F39-42DD-9729-F471788DF04B} = {6AC78A06-F985-4C3D-BF25-69C2B8C2849D}
+	EndGlobalSection
+EndGlobal

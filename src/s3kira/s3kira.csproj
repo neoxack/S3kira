@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>S3Kira</Title>
+        <Description>Simple and fast client for S3 storages</Description>
+        <Version>0.5.0</Version>
+        <PackageId>Neoxack.S3Kira</PackageId>
+        <PackageTags>s3;performance</PackageTags>
+        <PackageProjectUrl>https://gitlab.com/neoxack/s3kira</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Copyright>Semyon Dragunov</Copyright>
+        <Authors>Semyon Dragunov (neoxack@gmail.com)</Authors>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <InternalsVisibleTo Include="s3kira.Tests"/>
+    </ItemGroup>
+</Project>
