@@ -1,3 +1,4 @@
+[![.NET](https://github.com/neoxack/S3kira/actions/workflows/dotnet.yml/badge.svg)](https://github.com/neoxack/S3kira/actions/workflows/dotnet.yml)
 [![NuGet](https://img.shields.io/nuget/v/Neoxack.S3Kira.svg)](https://www.nuget.org/packages/Neoxack.S3Kira)
 [![NuGet](https://img.shields.io/nuget/dt/Neoxack.S3Kira.svg)](https://www.nuget.org/packages/Neoxack.S3Kira)
 [![CodeFactor](https://www.codefactor.io/repository/github/neoxack/s3kira/badge)](https://www.codefactor.io/repository/github/neoxack/s3kira)
