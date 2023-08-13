@@ -83,10 +83,10 @@ Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
  [Host]     : .NET 7.0.9 (7.0.923.32018), Arm64 RyuJIT AdvSIMD
  DefaultJob : .NET 7.0.9 (7.0.923.32018), Arm64 RyuJIT AdvSIMD
 ```
-| Method |      Mean |    Error |   StdDev | Ratio | RatioSD |  Allocated | Alloc Ratio |
-|--------|----------:|---------:|---------:|------:|--------:|-----------:|------------:|
-| Minio  | 101.78 ms | 1.821 ms | 1.703 ms |  1.20 |    0.02 | 6463.49 KB |      114.26 |
-| S3Kira |  84.79 ms | 1.122 ms | 1.050 ms |  1.00 |    0.00 |   56.57 KB |        1.00 |
+| Method       |      Mean |    Error |   StdDev | Ratio | RatioSD |  Allocated | Alloc Ratio |
+|--------------|----------:|---------:|---------:|------:|--------:|-----------:|------------:|
+| minio-dotnet | 101.78 ms | 1.821 ms | 1.703 ms |  1.20 |    0.02 | 6463.49 KB |      114.26 |
+| S3Kira       |  84.79 ms | 1.122 ms | 1.050 ms |  1.00 |    0.00 |   56.57 KB |        1.00 |
 
 
 ## Contributing
