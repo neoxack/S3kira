@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="AWSSDK.S3" Version="3.7.201.14" />
       <PackageReference Include="BenchmarkDotNet" Version="0.13.7" />
       <PackageReference Include="Minio" Version="5.0.0" />
     </ItemGroup>

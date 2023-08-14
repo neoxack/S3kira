@@ -86,6 +86,7 @@ Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
 | Method       |      Mean |    Error |   StdDev | Ratio | RatioSD |  Allocated | Alloc Ratio |
 |--------------|----------:|---------:|---------:|------:|--------:|-----------:|------------:|
 | minio-dotnet | 101.78 ms | 1.821 ms | 1.703 ms |  1.20 |    0.02 | 6463.49 KB |      114.26 |
+| AmazonAwsSdk |  88.13 ms | 1.356 ms | 1.269 ms |  1.06 |    0.02 | 9491.12 KB |     167.776 | 
 | S3Kira       |  84.79 ms | 1.122 ms | 1.050 ms |  1.00 |    0.00 |   56.57 KB |        1.00 |
 
 
