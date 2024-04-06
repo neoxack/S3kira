@@ -6,6 +6,7 @@ using Amazon.S3.Transfer;
 using Amazon.S3.Util;
 using BenchmarkDotNet.Attributes;
 using Minio;
+using Minio.DataModel.Args;
 
 namespace s3kira.Benchmark;
 
@@ -13,7 +14,7 @@ namespace s3kira.Benchmark;
 public class FullBenchmark
 {
     private S3Kira _s3Kira = null!;
-    private MinioClient _minioClient = null!;
+    private IMinioClient _minioClient = null!;
     private AmazonS3Client _amazonS3Client = null!;
     private TransferUtility _transferUtility = null!;
     private CancellationToken _cancellation;

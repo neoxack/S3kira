@@ -158,8 +158,8 @@ public sealed class S3Kira: IDisposable
     private async Task MultipartUploadFileAsync(UploadFileCommand command, CancellationToken cancellation)
     {
         var uploadId = await MultipartStartAsync(command.Bucket, command.FileName, command.ContentType, cancellation);
-        if (uploadId == string.Empty)
-            throw new Exception("Can't read UploadId");
+        if (string.IsNullOrEmpty(uploadId))
+            throw new FormatException("Can't read UploadId");
         
         var bufferPool = ArrayPool<byte>.Shared;
         var stringPool = ArrayPool<string>.Shared;
@@ -352,7 +352,7 @@ public sealed class S3Kira: IDisposable
         }
     }
     
-    private static Exception Error(HttpResponseMessage response)
+    private static HttpRequestException Error(HttpResponseMessage response)
     {
         var reason = response.ReasonPhrase ?? response.ToString();
         var exception = new HttpRequestException("Storage has returned an unexpected result: " +
@@ -453,7 +453,7 @@ public sealed class S3Kira: IDisposable
         var payloadHash = HashUtils.GetSha256(buffer.AsSpan(0, size));
         var httpRequest = CreateHttpRequestMessage(HttpMethod.Put, uri, payloadHash);
         var content = new ByteArrayContent(buffer, 0, size);
-        content.Headers.TryAddWithoutValidation(Headers.ContentLength, size.ToString());
+        content.Headers.TryAddWithoutValidation(Headers.ContentLength, size.ToString(NumberFormatInfo.InvariantInfo));
         httpRequest.Content = content;
         return httpRequest;
     }

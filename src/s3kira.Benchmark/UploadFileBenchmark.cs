@@ -1,5 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Minio;
+using Minio.DataModel.Args;
 
 namespace s3kira.Benchmark;
 
@@ -7,7 +8,7 @@ namespace s3kira.Benchmark;
 public class UploadFileBenchmark
 {
     private S3Kira _s3Kira = null!;
-    private MinioClient _minioClient = null!;
+    private IMinioClient _minioClient = null!;
     private CancellationToken _cancellation;
     private readonly MemoryStream _memoryStream = new MemoryStream();
     private long _size;

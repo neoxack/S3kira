@@ -29,7 +29,7 @@ internal ref struct ValueStringBuilder
     {
         Span<char> buffer = stackalloc char[10];
         var pos = _length;
-        if (value.TryFormat(buffer, out var written))
+        if (value.TryFormat(buffer, out var written, default, NumberFormatInfo.InvariantInfo))
         {
             if (pos > _buffer.Length - written)
                 ThrowDoesNotFit();
@@ -45,7 +45,7 @@ internal ref struct ValueStringBuilder
     {
         Span<char> buffer = stackalloc char[16];
         var pos = _length;
-        if (value.TryFormat(buffer, out var written, format))
+        if (value.TryFormat(buffer, out var written, format, CultureInfo.InvariantCulture))
         {
             if (pos > _buffer.Length - written) 
                 ThrowDoesNotFit();
@@ -56,24 +56,7 @@ internal ref struct ValueStringBuilder
         else 
             CantFormatToString(value);
     }
-
-    public void Append(double value)
-    {
-        Span<char> buffer = stackalloc char[32];
-        var pos = _length;
-        if (value.TryFormat(buffer, out var written, default, CultureInfo.InvariantCulture))
-        {
-            if (pos > _buffer.Length - written) 
-                ThrowDoesNotFit();
-            buffer.CopyTo(_buffer[pos..]);
-
-            _length = pos + written;
-        }
-        else 
-            CantFormatToString(value);
-    }
-
-
+    
     public void Append(string s)
     {
         var pos = _length;
@@ -100,12 +83,12 @@ internal ref struct ValueStringBuilder
 
     private static void CantFormatToString<T>(T value) where T : struct
     {
-        throw new Exception($"Can't format '{value}' to string");
+        throw new ArgumentException($"Can't format '{value}' to string");
     }
 
     private static void ThrowDoesNotFit()
     {
-        throw new Exception($"Value does not fit");
+        throw new ArgumentException($"Value does not fit");
     }
     
     public readonly ReadOnlySpan<char> AsReadonlySpan() => _buffer[.._length];

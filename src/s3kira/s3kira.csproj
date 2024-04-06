@@ -1,15 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <PropertyGroup>
         <Title>S3Kira</Title>
         <Description>Simple and fast client for S3 storages</Description>
-        <Version>0.6.0</Version>
+        <Version>0.7.0</Version>
         <PackageId>Neoxack.S3Kira</PackageId>
         <PackageTags>s3;performance</PackageTags>
         <PackageProjectUrl>https://github.com/neoxack/S3kira</PackageProjectUrl>
@@ -18,6 +20,22 @@
         <Authors>Semyon Dragunov (neoxack@gmail.com)</Authors>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <AnalysisMode>All</AnalysisMode>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference
+                Include="SonarAnalyzer.CSharp"
+                Version="9.23.1.88495"
+                PrivateAssets="all"
+                Condition="$(MSBuildProjectExtension) == '.csproj'"
+        />
+    </ItemGroup>
 
     <ItemGroup>
         <None Include="..\..\README.md" Pack="true" PackagePath=""/>

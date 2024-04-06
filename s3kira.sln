@@ -8,6 +8,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s3kira.Benchmark", "src\s3k
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s3kira.Tests", "src\s3kira.Tests\s3kira.Tests.csproj", "{7F021FB8-2F39-42DD-9729-F471788DF04B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codestyle", "codestyle", "{0405E97D-0BBB-4EDB-A462-D7F888F9A9D4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

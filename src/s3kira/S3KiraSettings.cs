@@ -6,5 +6,5 @@ public sealed class S3KiraSettings
     public required string AccessKey { get; init; }
     public required string SecretKey { get; init; }
     public string Region { get; init; } = "us-east-1";
-    public bool UseHttps { get; init; } = false;
+    public bool UseHttps { get; init; }
 }

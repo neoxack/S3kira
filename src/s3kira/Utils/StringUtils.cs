@@ -33,9 +33,10 @@ internal static class StringUtils
         
         var encoded = Encoding.UTF8.GetBytes(name, byteBuffer);
 
-        foreach (char symbol in byteBuffer.AsSpan(0, encoded))
+        foreach (var byteSymbol in byteBuffer.AsSpan(0, encoded))
         {
-            if (ValidUrlCharacters.Contains(symbol))
+            var symbol = (char) byteSymbol;
+            if (ValidUrlCharacters.Contains(symbol, StringComparison.Ordinal))
             {
                 builder.Append(symbol);
             }
@@ -56,10 +57,8 @@ internal static class StringUtils
         return hasEncoded;
     }
     
-    private static int FormatX2(ref Span<char> buffer, char value)
+    private static void FormatX2(ref Span<char> buffer, char value)
     {
-        return ((int) value).TryFormat(buffer, out var written, "x2", CultureInfo.InvariantCulture)
-            ? written
-            : -1;
+        ((int) value).TryFormat(buffer, out _, "x2", CultureInfo.InvariantCulture);
     }
 }

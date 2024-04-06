@@ -64,7 +64,7 @@ internal sealed class Signature
         if (query[0] == '?') scanIndex = 1;
 
         var textLength = query.Length;
-        var equalIndex = query.IndexOf('=');
+        var equalIndex = query.IndexOf('=', StringComparison.Ordinal);
         if (equalIndex == -1) equalIndex = textLength;
 
         while (scanIndex < textLength)
